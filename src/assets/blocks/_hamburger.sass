@@ -1,0 +1,31 @@
+// hamburger
+.hamburger
+  height: 2px
+  width: 15px
+  background-color: lighten($grey, 40%)
+  outline: none
+  border: none
+  align-self: center
+  display: none
+  transition: all 1s ease
+  @media only screen and ( max-width: 1279px )
+    display: inline-block
+  &:after
+    content: ""
+    position: absolute
+    height: 2px
+    width: 15px
+    background-color: lighten($grey, 40%)
+    transform: translateX(-50%)
+    bottom: 29px
+  &:before
+    content: ""
+    position: absolute
+    height: 2px
+    width: 15px
+    background-color: lighten($grey, 40%)
+    transform: translateX(-50%)
+    top: 29px
+  &:active, &:focus
+      outline: none
+// hamburger END

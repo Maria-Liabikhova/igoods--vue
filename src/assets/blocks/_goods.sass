@@ -1,0 +1,303 @@
+// goods
+.goods
+  height: auto
+  width: 100%
+  background-color: $violet
+  display: flex
+  justify-content: center
+  align-items: center
+  &--blue
+    background-color: lighten($turquoise, 10%)
+  &--delivery
+    background-color: $turquoise
+    justify-content: space-around
+  &--tryit
+    background-color: $white
+  &--howdeliver
+    padding: 70px 90px 0 90px
+    padding: 0
+    background-color: $light-blue
+    @media only screen and ( max-width: 991px)
+      padding: 0
+      flex-direction: column
+    @media only screen and ( max-width: 767px)
+      padding: 0
+  &__input:placeholder
+    color: lighten($grey, 60%)
+  &__img
+    height: 64px
+    margin-bottom: 10px
+    @media only screen and ( max-width: 767px)
+      height: 54px
+      margin-bottom: 5px
+    &--violet
+      transition: all .3s ease
+      &:hover
+        height: 70px
+        margin-bottom: 4px
+        transition: all .3s ease
+      @media only screen and ( max-width: 767px)
+        &:hover
+          height: 57px
+          margin-bottom: 2px
+    &--shops
+      height: 25px
+      @media only screen and ( max-width: 767px)
+        height: 20px
+  &__link
+    color: $white
+    font-weight: semibold
+    text-align: center
+    &:hover, &:active, &:focus
+      color: $white
+      text-decoration: none
+    &--card
+      width: calc(100% / 5 - 10px)
+      margin-right: 10px
+      margin-bottom: 20px
+      @media only screen and ( max-width: 991px )
+        margin-bottom: 10px
+        width: calc(100% / 5 - 10px)
+      @media only screen and ( max-width: 767px )
+        width: calc(100% / 3 - 10px)
+      @media only screen and ( max-width: 479px )
+        width: calc(100% / 2  - 10px)
+    &--button
+      white-space: nowrap
+      width: 375px
+      transition: all .3s ease
+      align-self: center
+      text-align: center
+      &:hover
+        background-color: lighten($violet, 30% )
+      @media only screen and ( max-width: 991px )
+        width: 375px 
+        font-size: 16px
+      @media only screen and ( max-width: 479px )
+        font-size: 12px
+        padding-right: 10px
+        padding-left: 10px
+        width: auto
+    &--shops
+      flex-grow: 1
+      @media only screen and ( max-width: 767px )
+        flex-wrap: wrap
+        margin-right: 5px
+  &__item
+    width: calc(100% / 3)
+    display: flex
+    justify-content: center
+    flex-direction: column
+    &--blue
+      overflow: hidden
+      width: calc(100% / 3) 
+      align-self: start
+      @media only screen and ( max-width: 991px )
+        width: calc(100% / 2)  !important
+        margin: 0 70px
+      @media only screen and ( max-width: 767px )
+        width: 100% !important
+      @media only screen and ( max-width: 479px )
+        margin: 0
+  &__wrap
+    width: auto
+    max-width: 1280px
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    &--forinput
+      flex-direction: row
+      @media only screen and ( max-width: 767px)
+        flex-direction: column
+        // height: auto !important
+    &--warning
+      height: 84px
+      @media only screen and ( max-width: 767px)
+        height: auto
+  &__row
+    display: flex
+    margin-bottom: 25px
+    flex-wrap: wrap
+    justify-content: space-around
+  &__heading
+    color: $white
+    font-size: 40px
+    line-height: 70px
+    margin-bottom: 30px
+    text-align: center
+    font-style: normal
+    font-weight: 600
+    text-align: center
+    @media only screen and ( max-width: 767px)
+      font-size: 22px
+      line-height: 35px !important
+    @media only screen and ( max-width: 479px)
+      line-height: 45px
+      margin-bottom: 20px
+      margin-top: 0
+  &__subject
+    color: $grey
+    font-size: 18px
+    margin-bottom: 5px
+    margin-top: 5px
+    line-height: 30px
+    font-weight: 600
+    white-space: nowrap
+    text-align: center
+    margin-top: 0
+    margin-bottom: 8px
+    @media only screen and ( max-width: 767px)
+      font-size: 16px
+      margin-bottom: 10px
+  &__text
+    font-weight: regular
+    &--blue
+      color: $grey
+      text-align: center
+      line-height: 30px
+      @media only screen and ( max-width: 991px)
+        font-size: 16px
+        line-height: 25px
+      @media only screen and ( max-width: 767px)
+        line-height: 20px
+        font-size: 12px
+    &--warning
+      display: none
+      color: $crimson
+    &--delivery
+      @media only screen and ( max-width: 1279px)
+        text-align: center
+    &--tryit
+      font-size: 18px
+      line-height: 34px
+      width: 55%
+      margin-bottom: 15px
+      @media only screen and ( max-width: 1279px)
+        width: 100%
+      @media only screen and ( max-width: 991px)
+        font-size: 16px
+        line-height: 28px
+    &--small
+      font-size: 16px
+      @media only screen and ( max-width: 720px)
+        font-size: 12px 
+    &--howdeliver
+      @media only screen and ( max-width: 1279px)
+        font-size: 14px
+        line-height: 26px
+        margin-bottom: 0
+  &__yellow
+    background-color: $yellow
+    color: $grey
+    padding: 0 10px 10px 10px
+  &__circle
+    transform: rotate(45deg)
+    height: 90px
+    width: 60px
+    border-radius: 50%
+    background-color: $salad
+    align-self: center
+    display: flex
+    justify-content: center
+    align-items: center
+    &--turquoise
+      background-color: $turquoise 
+    &--yellow
+      background-color: $yellow
+  &__icon
+    transform: rotate(-45deg)
+    color: $grey
+    font-size: 35px
+  &__input
+    width: 100%
+    border: none
+    padding: 12px
+    font-size: 16px
+    color: $grey
+    border-radius: 4px
+    background-color: lighten($turquoise, 10%)
+    &:hover, &:focus, &:active
+      outline: none
+    &--tryit
+      width: 187px
+      height: 50px
+    @media only screen and ( max-width: 767px)
+      margin-bottom: 15px
+      width: 100%
+  &__button
+    background-color: $white
+    transition: all .3s ease
+    width: 177px
+    margin-left: 10px
+    flex-shrink: 0
+    font-size: 14px
+    border: none
+    border-radius: 4px
+    &:hover, &:focus, &:active
+      background-color: lighten($turquoise, 10%)
+      outline: none
+    &--tryit, &--delivery
+      font-weight: 600
+      background-color: $turquoise
+      &:hover, &:focus, &:active
+        background-color: darken($turquoise, 7%)
+      @media only screen and ( max-width: 767px)
+        height: 48px
+        width: 100%
+        margin-left: 0
+    &--howdeliver
+      height: 48px
+      width: 100% 
+      background-color: $white
+      font-size: 16px
+      margin: 0 0 20px 0
+      padding: 0
+      &:hover
+        background-color: lighten($turquoise, 3%)
+    &--delivery
+      background-color: $white
+      @media only screen and ( max-width: 767px)
+        margin-bottom: 10px
+  &__shops
+    display: flex
+    width: 100%
+    @media only screen and ( max-width: 767px)
+      flex-wrap: wrap
+  &__coll
+    &--tryit
+      width: auto
+      margin: 40px auto 40px 0px
+      @media only screen and ( max-width: 767px)
+        margin: 0
+    &--wrap
+      overflow: hidden
+      max-height: 393px
+      width: 100%
+      margin-bottom: 20px
+      transition: all .5s ease
+      padding: 0
+      outline: none
+    &--delivery
+      display: inline-block
+      width: 60%
+      margin-right: 0
+      margin-left: auto
+      padding-bottom: 40px
+      padding-top: 30px
+      @media only screen and ( max-width: 1279px)
+        width: 100%
+        margin: 0
+      @media only screen and ( max-width: 479px)
+        padding: 0
+  &__list
+    padding-left: 0
+    list-style-position: inside
+  &__nowrap
+    white-space: nowrap
+    @media only screen and ( max-width: 991px)
+      white-space: pre-wrap
+.collapse
+  transition: all .5s ease
+  max-height: 2500px
+  overflow: hidden
+// goods END  

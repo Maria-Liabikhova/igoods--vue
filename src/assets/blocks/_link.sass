@@ -1,0 +1,79 @@
+// link-button
+.link
+  transition: all .3s ease
+  &:hover, &:active, &:visited, &:focus
+    text-decoration: none
+    transition: all .3s ease
+  &--button
+    height: 50px
+    padding-left: 20px
+    padding-right: 20px
+    background-color: lighten($violet, 20%)
+    color: $white
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 30px
+    font-size: 16px
+    white-space: nowrap
+    &:hover, &:active, &:focus
+      color: $white
+      background-color: lighten($violet, 10% )
+      cursor: pointer
+    @media only screen and ( max-width: 767px)
+      font-size: 12px
+      height: 40px
+      width: 130px
+      line-height: 16px
+    @media only screen and ( max-width: 479px)
+      height: 30px
+  &--top 
+    color: $grey
+    margin-right: 25px
+    white-space: nowrap
+    &:hover, &:active, &:focus
+      color: $grey
+      text-decoration: none
+  &--phone
+    margin-right: 10px
+    margin-left: -8px
+  &--violet
+    color: darken($violet, 20%)
+    margin-left: 20px
+    justify-self: center
+    align-self: center
+    &:hover, &:active, &:focus
+      color: $violet
+    @media only screen and ( max-width: 767px)
+      padding-top: 15px
+      margin-left: 0
+      font-size: 14px
+    @media only screen and ( max-width: 479px)
+      font-size: 12px
+  &--small
+    font-size: 14px
+    @media only screen and ( max-width: 767px)
+      width: 180px
+    @media only screen and ( max-width: 479px)
+      font-size: 12px
+      width: 150px
+  &--wide
+    width: 230px
+    @media only screen and ( max-width: 479px)
+      width: 170px
+  &--blue
+    width: 250px !important
+  &--disappear
+    @media only screen and ( max-width: 1279px)
+      display: none
+  &--h-menu
+    display: flex
+    color: $grey
+    &:hover, &:active, &:visited, &:focus
+      color: $grey
+    &--top 
+      margin-bottom: 25px
+    &--bottom
+      margin-right: 15px
+// link-button END

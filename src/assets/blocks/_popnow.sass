@@ -1,0 +1,81 @@
+// popnow
+.popnow
+  display: flex
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  justify-content: center
+  &__card
+    width: auto
+    padding: 20px 24px  24px 24px
+    display: flex
+    flex-direction: column
+  &__img
+    &--prod
+      height: 160px 
+      width: 160px !important
+      margin-left: auto
+      margin-right: auto
+    &--water
+      width: auto !important
+    &--shop
+      height: 20px 
+      width: auto !important
+      margin-bottom: 5px
+      align-self: start
+  &__price
+    color: lighten($violet, 30%)
+    margin-bottom: 0
+    &--now
+      font-weight: bold
+      font-size: 22px
+      line-height: 25px
+      @media only screen and ( max-width: 767px)
+        font-size: 18px
+    &--old
+      font-size: 14px
+      line-height: 16px
+      text-decoration: line-through
+      margin-left: -12px
+      @media only screen and ( max-width: 767px)
+        font-size: 12px
+    &--grey
+      color: lighten($grey, 60%)
+      font-size: 16px
+  &__text
+    text-align: start
+    height: 44px
+    overflow: hidden
+    text-overflow: ellipsis
+    @media only screen and ( max-width: 767px)
+      font-size: 12px
+    &--volume
+      color: lighten($grey, 60%)
+      height: auto
+      line-height: 15px
+  &__wrap
+    &--text
+      line-height: 22px
+      margin-bottom: 5px
+      font-size: 14px
+  &__link
+    color: darken($turquoise, 70%)
+    font-size: 14px
+    line-height: 40px
+    width: calc( 100% - 5px )
+    border-radius: 5px
+    background-color: $turquoise
+    align-items: center
+    justify-content: center
+    display: flex
+    transition: all .5s ease
+    &:hover, &:active
+      color: darken($turquoise, 70%)
+      background-color: darken($turquoise, 7%)
+    @media only screen and ( max-width: 767px)
+      font-size: 12px
+      line-height: 35px
+      width: 80%
+  &__carousel
+    display: flex
+// popnow END
