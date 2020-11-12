@@ -1,4 +1,5 @@
 <template>
+
   <header class="header">
 		<section class="header__top">
 			<div class="wrapper wrapper--header">
@@ -27,7 +28,7 @@
 								<a href="#" class="link link--violet">Выбрать магазин</a>
 							</div>
 						</div>
-						<img class="profits__img profits__img--delivery" src="img/bgi-delivery.png" alt="картинка акционные товары Ленты">
+						<img class="profits__img profits__img--delivery" :src="require('@/assets/img/bgi-delivery.png')"  alt="картинка акционные товары Ленты">
 					</div>
 					<div class="profits__wrap profits__wrap--catalog" style="background-image: url(img/bgi-catalog.png)">
 						<div class="profits__discription">
@@ -73,13 +74,13 @@
 				</div>
 			</section>
 			<section class="wrapper wrapper--shops">
-				<a href="#" class="shops__links"><img class="shops__img" src="img/label-shop/label-metro.svg"></a>
-				<a href="#" class="shops__links"><img class="shops__img" src="img/label-shop/label-lenta.svg"></a>
-				<a href="#" class="shops__links"><img class="shops__img" src="img/label-shop/label-prisma.svg"></a>
-				<a href="#" class="shops__links"><img class="shops__img" src="img/label-shop/label-babylon.svg"></a>
-				<a href="#" class="shops__links"><img class="shops__img" src="img/label-shop/label-vkusvill.svg"></a>
-				<a href="#" class="shops__links"><img class="shops__img" src="img/label-shop/label-karusel.svg"></a>
-				<a href="#" class="shops__links"><img class="shops__img" src="img/label-shop/label-auchan.svg"></a>
+				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-metro.svg')"></a>
+				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-lenta.svg')"></a>
+				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-prisma.svg')"></a>
+				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-babylon.svg')"></a>
+				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-vkusvill.svg')"></a>
+				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-karusel.svg')"></a>
+				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-auchan.svg')"></a>
 			</section>
 		</section>
 	</header>
