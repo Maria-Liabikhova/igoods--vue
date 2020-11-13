@@ -9,7 +9,7 @@
 					<a href="#" class="link link--top link--disappear">Как это работает</a>
 					<a href="#" class="link link--top link--disappear">Доставка для бизнеса</a>
 					<a href="#" class="link link--top link--disappear">Войти</a>
-					<a href="#" class="link link--top link--phone"><i class="fa fa-phone header__icon"></i></a>
+					<a href="#" class="link link--top link--phone"><font-awesome-icon class="header__icon" :icon="['fas', 'phone' ]"/></a>
 					<a href="#" class="link link--button link--small link--disappear">Заказать доставку</a>
 				</div>
 				<button class="hamburger" type="menu"></button>
