@@ -4,17 +4,17 @@
       <h2 class="title">Как работает igooods</h2>
       <div class="goods__row">
         <div class="goods__item goods__item--blue">
-          <div class="goods__circle"><i class="fa fa-shopping-cart goods__icon"></i></div>
+          <div class="goods__circle"><font-awesome-icon class="goods__icon" :icon="['fas', 'shopping-cart']"/></div>
           <h3 class="goods__subject">Вы заказываете продукты</h3>
           <p class="goods__text goods__text--blue">Выберите магазин и соберите корзину на сайте или в приложении. Цены как в гипермакете</p>
         </div>
         <div class="goods__item goods__item--blue">
-          <div class="goods__circle goods__circle--turquoise"><i class="fa fa-calendar-check-o goods__icon"></i></div>
+          <div class="goods__circle goods__circle--turquoise"><font-awesome-icon class="goods__icon" :icon="['fas', 'calendar-check']"/></div>
           <h3 class="goods__subject">Мы покупаем всё по списку</h3>
           <p class="goods__text goods__text--blue">Персональный закупщик купит продукты и передаст курьеру. Если чего-то нет в наличии, согласует с вами замены</p>
         </div>
         <div class="goods__item goods__item--blue">
-          <div class="goods__circle goods__circle--yellow"><i class="fa fa-clock-o goods__icon"></i></div>
+          <div class="goods__circle goods__circle--yellow"><font-awesome-icon class="goods__icon" :icon="['fas', 'clock']"/></div>
           <h3 class="goods__subject">Доставляем за полтора часа</h3>
           <p class="goods__text goods__text--blue">Курьер приедет к вам в удобное время. Ближайшая доставка через 90 минут, оплата наличными или картой</p>
         </div>
