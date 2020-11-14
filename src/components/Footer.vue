@@ -6,23 +6,22 @@
 				<p class="footer__text footer__text--copyright">© igooods 2014—2020</p>
 			</div> 
 			<div class="footer__coll footer__coll--servises">
-				<a class="footer__link footer__link--servises link" href="#">Как это работает</a>
-				<a class="footer__link footer__link--servises link" href="#">Выбор товара и оплата</a>
-				<a class="footer__link footer__link--servises link" href="#">Доставка</a>
-				<a class="footer__link footer__link--servises link" href="#">Доставка для бизнеса</a>
-				<a class="footer__link footer__link--servises link" href="#">Обмен и возврат това</a>
-				<a class="footer__link footer__link--servises link" href="#">Работа в igooods</a>
-				<a class="footer__link footer__link--servises link" href="#">Реквизиты франчайзи</a>
-				<a class="footer__link footer__link--servises link" href="#">Франшиза</a>
+        <router-link
+          v-for="links in serviseLinks"
+          :key="links.id"
+          to="#"
+          class="footer__link footer__link--servises link"
+          >{{links.link}}
+        </router-link>
 			</div> 
 			<div class="footer__coll footer__coll--shops">
-				<a class="footer__link link" href="#">METRO доставка продуктов</a>
-				<a class="footer__link link" href="#">ЛЕНТА доставка продуктов</a>
-				<a class="footer__link link" href="#">ПРИЗМА доставка продуктов</a>
-				<a class="footer__link link" href="#">Super Babylon доставка продуктов</a>
-				<a class="footer__link link" href="#">ВкусВилл доставка продуктов</a>
-				<a class="footer__link link" href="#">КАРУСЕЛЬ доставка продуктов</a>
-				<a class="footer__link link" href="#">Ашан доставка продуктов</a>
+        <router-link
+          v-for="links in deliveryLinks"
+          :key="links.id"
+          to="#"
+          class="footer__link link"
+          >{{links.link}}
+        </router-link>
 			</div> 
 			<div class="footer__coll footer__coll--contacts">
 				<div class="footer__coll footer__coll--icons">
@@ -33,11 +32,6 @@
 						<a class="footer__link footer__link--icon link" href="#"><img class="footer__icon" :src="require('@/assets/img/facebook-f-brands.svg')" /></a>
 						<a class="footer__link footer__link--icon link" href="#"><img class="footer__icon" :src="require('@/assets/img/vk-brands.svg')" /></a>
 						<a class="footer__link footer__link--icon link" href="#"><img class="footer__icon" :src="require('@/assets/img/telegram-plane-brands.svg')" /></a>
-						<!-- <a class="footer__link footer__link--icon link" href="#"><font-awesome-icon class="footer__icon" :icon="['fab', 'fa-facebook']"/></a>
-						<a class="footer__link footer__link--icon link" href="#"><font-awesome-icon class="footer__icon" :icon="['fas', 'vk']"/></a>
-						<a class="footer__link footer__link--icon link" href="#"><font-awesome-icon class="footer__icon" :icon="['fas', 'telegram']"/></a> -->
-						<!-- <a class="footer__link footer__link--icon link" href="#"><i class="footer__icon fa fa-vk"></i></a>
-						<a class="footer__link footer__link--icon link" href="#"><i class="footer__icon fa fa-telegram"></i></a> -->
 					</div>
 				</div>
 				<div class="footer__wrap footer__wrap--soc">
@@ -48,6 +42,34 @@
 		</div>
 	</footer>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      serviseLinks: [
+        {link: 'Как это работает'},
+        {link: 'Выбор товара и оплата'},
+        {link: 'Доставка'},
+        {link: 'Доставка для бизнеса'},
+        {link: 'Обмен и возврат това'},
+        {link: 'Работа в igooods'},
+        {link: 'Реквизиты франчайзи'},
+        {link: 'Франшиза'},
+      ],
+      deliveryLinks: [
+        {link: 'METRO доставка продуктов'},
+        {link: 'ЛЕНТА доставка продуктов'},
+        {link: 'ПРИЗМА доставка продуктов'},
+        {link: 'Super Babylon доставка продуктов'},
+        {link: 'ВкусВилл доставка продуктов'},
+        {link: 'КАРУСЕЛЬ доставка продуктов'},
+        {link: 'Ашан доставка продуктов'},
+      ]
+    }
+  }
+}
+</script>
 
 <style scoped>
 .footer__icon{
