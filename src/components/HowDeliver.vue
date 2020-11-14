@@ -2,7 +2,7 @@
   <section class="goods goods--howdeliver"> 
 		<div class="wrapper wrapper--howdeliver">
 			<div class="goods__coll" >
-				<div class="goods__coll--wrap">
+				<div :class="{'collapse': isCollapse}" class="goods__coll--wrap">
 					<h2 class="title title--start">Как происходит доставка продуктов из магазинов</h2>
 					<p class="goods__text goods__text--small">Вместо двух- (а то и четырёх-) часовой поездки в супермаркет Вы получаете товары и свежие продукты на дом по ценам магазина, в удобное для Вас время, ожидая курьера не более 25 минут!</p>
 					<ol class="goods__list">
@@ -20,7 +20,7 @@
 						<li class="goods__text goods__text--tryit goods__text--howdeliver">Купите продукты с доставкой на дом по льготной цене 199 рублей для первого заказа!</li>
 					</ol>
 				</div>
-				<button class="goods__button goods__button--tryit goods__button--howdeliver" type="submit">Узнать больше</button>
+				<button  @click="isCollapse = !isCollapse" class="goods__button goods__button--tryit goods__button--howdeliver">Узнать больше</button>
 			</div>
 			<div class="trynow">
 				<img class="trynow__img" :src="require('@/assets/img/heart.svg')">
@@ -30,3 +30,13 @@
 		</div>
 	</section>
 </template>
+
+<script>
+export default {
+  data: () => {
+    return {
+      isCollapse: false,
+    }
+  },
+}
+</script>
