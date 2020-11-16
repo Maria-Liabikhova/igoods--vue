@@ -13,15 +13,33 @@
 					</div>
 				<p class="goods__text">Работаем с 7 сетями в Санкт-Петербурге</p>
 				<div class="goods__shops">
-					<a href="#" class="goods__link goods__link--shops"><img class="goods__img goods__img--shops" :src="require('@/assets/img/label-shop/label-metro.svg')"></a>
-					<a href="#" class="goods__link goods__link--shops"><img class="goods__img goods__img--shops" :src="require('@/assets/img/label-shop/label-lenta.svg')"></a>
-					<a href="#" class="goods__link goods__link--shops"><img class="goods__img goods__img--shops" :src="require('@/assets/img/label-shop/label-prisma.svg')"></a>
-					<a href="#" class="goods__link goods__link--shops"><img class="goods__img goods__img--shops" :src="require('@/assets/img/label-shop/label-babylon.svg')"></a>
-					<a href="#" class="goods__link goods__link--shops"><img class="goods__img goods__img--shops" :src="require('@/assets/img/label-shop/label-vkusvill.svg')"></a>
-					<a href="#" class="goods__link goods__link--shops"><img class="goods__img goods__img--shops" :src="require('@/assets/img/label-shop/label-karusel.svg')"></a>
-					<a href="#" class="goods__link goods__link--shops"><img class="goods__img goods__img--shops" :src="require('@/assets/img/label-shop/label-auchan.svg')"></a>
+          <router-link
+            v-for="links in linkShops"
+            :key="links.id"
+            to="#"
+            class="goods__link goods__link--shops"
+            ><img class="goods__img goods__img--shops" :src="links.link">
+          </router-link>
 				</div>
 			</div>
 		</div>
 	</section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      linkShops: [
+        {link: require('@/assets/img/label-shop/label-metro.svg')},
+        {link: require('@/assets/img/label-shop/label-lenta.svg')},
+        {link: require('@/assets/img/label-shop/label-prisma.svg')},
+        {link: require('@/assets/img/label-shop/label-babylon.svg')},
+        {link: require('@/assets/img/label-shop/label-vkusvill.svg')},
+        {link: require('@/assets/img/label-shop/label-karusel.svg')},
+        {link: require('@/assets/img/label-shop/label-auchan.svg')},
+      ]
+    }
+  }
+}
+</script>

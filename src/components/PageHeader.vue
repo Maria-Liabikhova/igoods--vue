@@ -4,13 +4,15 @@
 			<div class="wrapper wrapper--header">
 				<img class="header__img" :src="require('@/assets/img/label.jpg')" alt="логотип">
 				<div class="header__list">
-					<a href="#" class="link link--top link--disappear">Санкт-Петербург и ЛО</a>
-					<a href="#" class="link link--top link--disappear">Список магазинов</a>
-					<a href="#" class="link link--top link--disappear">Как это работает</a>
-					<a href="#" class="link link--top link--disappear">Доставка для бизнеса</a>
-					<a href="#" class="link link--top link--disappear">Войти</a>
-					<a href="#" class="link link--top link--phone"><font-awesome-icon class="header__icon" :icon="['fas', 'phone' ]"/></a>
-					<a href="#" class="link link--button link--small link--disappear">Заказать доставку</a>
+					<router-link
+					v-for="links in headerLinks"
+					:key="links.id"
+					to="#"
+					class="link link--top link--disappear"
+					>{{links.link}}
+					</router-link>
+					<router-link to="#" class="link link--top link--phone"><font-awesome-icon class="header__icon" :icon="['fas', 'phone' ]"/></router-link>
+					<router-link to="#" href="#" class="link link--button link--small link--disappear">Заказать доставку</router-link>
 				</div>
 				<button class="hamburger" type="menu"></button>
 			</div>
@@ -91,6 +93,17 @@
 
 	export default {
 		components: { carousel },
+		data() {
+			return {
+				headerLinks: [
+					{link: "Санкт-Петербург и ЛО"},
+					{link: "Список магазинов"},
+					{link: "Как это работает"},
+					{link: "Доставка для бизнеса"},
+					{link: "Войти"},
+				]
+			}
+		}
 	}
 </script>
 <style>
