@@ -21,58 +21,22 @@
 			<section class="wrapper wrapper--profits">
 				<carousel class="profits__carousel"	
 				:dots="false"	:loop="true" :autoplay="true"	:pullDrag="false"	:margin="10" :responsive="{0:{items:1.2,nav:false},992:{items:2,nav:true},1280:{items:1,nav:true}}">
-					<div class="profits__wrap profits__wrap--home">
-						<div class="profits__discription">
-							<h2 class="profits__title">доставка<br>продуктов<br>на дом</h2>
-							<p class="profits__text">Продукты из самых популярных<br>гипермаркетов Санкт-Петербурга</p>
-							<div class="profits__link-wrap">
-								<a href="#" class="link link--button">Заказать доставку</a>
-								<a href="#" class="link link--violet">Выбрать магазин</a>
-							</div>
-						</div>
-						<img class="profits__img profits__img--delivery" :src="require('@/assets/img/bgi-delivery.png')" alt="картинка акционные товары Ленты">
-					</div>
-					<div class="profits__wrap profits__wrap--catalog" style="background-image: url(img/bgi-catalog.png)">
-						<div class="profits__discription">
-							<h2 class="profits__title">самый<br>актуальный<br>каталог</h2>
-							<p class="profits__text">Ежедневно мы выгружаем актуальный каталог<br>товаров для каждого магазина</p>
-							<div class="profits__link-wrap">
-								<a href="#" class="link link--button">Смотреть каталог</a>
-								<a href="#" class="link link--violet">Выбрать магазин</a>
-							</div>
+
+				<div
+				v-for="slide in headerCarousel"
+				:key="slide.id"
+				class="profits__wrap"
+				:class="slide.class"
+				>	<div class="profits__discription">
+						<h2 class="profits__title">{{slide.firstRow}}<br>{{slide.secondRow}}<br>{{slide.thirdRow}}</h2>
+						<p class="profits__text">{{slide.firstTextRow}}<br>{{slide.secondTextRow}}<br>{{slide.thirdTextRow}}</p>
+						<div class="profits__link-wrap">
+							<router-link to="slide.linkFirst" class="link" :class="slide.classFirstLink">{{slide.linkFirstText}}<img class="profits__img profits__img--soc" :src="slide.firstlinkImg"></router-link>
+							<router-link to="slide.linkSecond" class="link link--violet">{{slide.linkSecondText}}<img class="profits__img profits__img--soc" :src="slide.secondtlinkImg"></router-link>
 						</div>
 					</div>
-					<div class="profits__wrap profits__wrap--pack" style="background-image: url(img/bgi-pack.png)">
-						<div class="profits__discription">
-							<h2 class="profits__title profits__title--navy">Фасуем товар</h2>
-							<p class="profits__text profits__text--navy">Отдельно овощи, фрукты, хозтовары<br>и заморозка. Соблюдаем<br>температурный режим</p>
-							<div class="profits__link-wrap">
-								<a href="#" class="link link--button">Как это работает</a>
-								<a href="#" class="link link--violet">Заказать доставку</a>
-							</div>
-						</div>
-					</div>
-					<div class="profits__wrap profits__wrap--app" >
-						<div class="profits__discription">
-							<h2 class="profits__title profits__title--navy">Пиложение<br>IOS и Android</h2>
-							<p class="profits__text profits__text--navy">Скачайте приложение и заказывайте в любое<br>время и в любом месте</p>
-							<div class="profits__link-wrap">
-								<a href="#" class="link link--violet"><img class="profits__img profits__img--soc" :src="require('@/assets/img/appstore.svg')"></a>
-								<a href="#" class="link link--violet"><img class="profits__img profits__img--soc" :src="require('@/assets/img/google.svg')"></a>
-							</div>
-						</div>
-						<img class="profits__img profits__img--phone" :src="require('@/assets/img/bg-app.png')" alt="картинка акционные товары Ленты">
-					</div>
-					<div class="profits__wrap profits__wrap--office" style="background-image: url('img/bgi-office.png')">
-						<div class="profits__discription">
-							<h2 class="profits__title profits__title--navy">Доставляем даже<br>в офисы</h2>
-							<p class="profits__text profits__text--navy">Можем регулярно привозить кофе, чай,<br>	молоко, овощи и фрукты в офис.</p>
-							<div class="profits__link-wrap">
-								<a href="#" class="link link--button link--wide">Подробнее для бизнеса</a>
-								<a href="#" class="link link--violet">Выбрать магазин</a>
-							</div>
-						</div>
-					</div>
+					<img class="profits__img" :class="slide.imgClass" :src="slide.img">
+				</div>
 				</carousel>
 			</section>
 			<section class="wrapper wrapper--shops">
@@ -83,13 +47,6 @@
 				class="shops__links"
 				><img class="shops__img" :src="link.imgSrc">
 				</router-link>
-				<!-- <a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-metro.svg')"></a>
-				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-lenta.svg')"></a>
-				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-prisma.svg')"></a>
-				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-babylon.svg')"></a>
-				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-vkusvill.svg')"></a>
-				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-karusel.svg')"></a>
-				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-auchan.svg')"></a> -->
 			</section>
 		</section>
 	</header>
@@ -129,6 +86,75 @@
 					to: "1"},
 					{imgSrc: require('@/assets/img/label-shop/label-auchan.svg'),
 					to: "1"}
+				],
+				headerCarousel: [
+					{class: "profits__wrap--home",
+					firstRow: "доставка",
+					secondRow: "продуктов",
+					thirdRow: "на дом",
+					firstTextRow: "Продукты из самых популярных",
+					secondTextRow: "гипермаркетов Санкт-Петербурга",
+					linkFirst: "1",
+					linkFirstText: "Заказать доставку",
+					linkSecond: "2",
+					linkSecondText: "Выбрать магазин",
+					img: require('@/assets/img/bgi-delivery.png'),
+					imgClass: "profits__img--delivery",
+					classFirstLink: "link--button"
+					},
+					{class: "profits__wrap--catalog",
+					firstRow: "самый",
+					secondRow: "актуальный",
+					thirdRow: "каталог",
+					firstTextRow: "Ежедневно мы выгружаем актуальный каталог",
+					secondTextRow: "товаров для каждого магазина",
+					linkFirst: "3",
+					linkFirstText: "Смотреть каталог",
+					linkSecond: "4",
+					linkSecondText: "Выбрать магазин",
+					img: require('@/assets/img/bgi-catalog.png'),
+					imgClass: "profits__img--catalog",
+					classFirstLink: "link--button"
+					},
+					{class: "profits__wrap--pack",
+					firstRow: "Фасуем товар",
+					firstTextRow: "Отдельно овощи, фрукты, хозтовары",
+					secondTextRow: "и заморозка. Соблюдаем",
+					thirdTextRow: "температурный режим",
+					linkFirst: "5",
+					linkFirstText: "как это работает",
+					linkSecond: "6",
+					linkSecondText: "Заказать доставку",
+					img: require('@/assets/img/bgi-pack.png'),
+					imgClass: "profits__img--catalog",
+					classFirstLink: "link--button"
+					},
+					{class: "profits__wrap--app",
+					firstRow: "Приложение",
+					secondRow: "IOS и Android",
+					firstTextRow: "Скачайте приложение и заказывайте в любое",
+					secondTextRow: "время и в любом мест",
+					linkFirst: "7",
+					linkSecond: "8",
+					firstlinkImg: require('@/assets/img/appstore.svg'),
+					secondtlinkImg: require('@/assets/img/google.svg'),
+					img: require('@/assets/img/bg-app.png'),
+					imgClass: "profits__img--phone",
+					classFirstLink: "link--violet"
+					},
+					{class: "profits__wrap--office",
+					firstRow: "Доставляем даже",
+					secondRow: "в офисы",
+					firstTextRow: "Можем регулярно привозить кофе, чай,",
+					secondTextRow: "молоко, овощи и фрукты в офис.",
+					linkFirst: "9",
+					linkFirstText: "Подробнее для бизнеса",
+					linkSecond: "10",
+					linkSecondText: "Выбрать магазин",
+					img: require('@/assets/img/bgi-office.png'),
+					imgClass: "profits__img--catalog",
+					classFirstLink: " link--button link--wide"
+					},
 				]
 			}
 		}
