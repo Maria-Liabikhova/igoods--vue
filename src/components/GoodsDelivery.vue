@@ -16,7 +16,7 @@
           <router-link
             v-for="links in linkShops"
             :key="links.id"
-            to="#"
+            :to="links.to"
             class="goods__link goods__link--shops"
             ><img class="goods__img goods__img--shops" :src="links.link">
           </router-link>
@@ -31,13 +31,20 @@ export default {
   data() {
     return {
       linkShops: [
-        {link: require('@/assets/img/label-shop/label-metro.svg')},
-        {link: require('@/assets/img/label-shop/label-lenta.svg')},
-        {link: require('@/assets/img/label-shop/label-prisma.svg')},
-        {link: require('@/assets/img/label-shop/label-babylon.svg')},
-        {link: require('@/assets/img/label-shop/label-vkusvill.svg')},
-        {link: require('@/assets/img/label-shop/label-karusel.svg')},
-        {link: require('@/assets/img/label-shop/label-auchan.svg')},
+        {link: require('@/assets/img/label-shop/label-metro.svg'),
+        to: "#"},
+        {link: require('@/assets/img/label-shop/label-lenta.svg'),
+        to: "#"},
+        {link: require('@/assets/img/label-shop/label-prisma.svg'),
+        to: "#"},
+        {link: require('@/assets/img/label-shop/label-babylon.svg'),
+        to: "#"},
+        {link: require('@/assets/img/label-shop/label-vkusvill.svg'),
+        to: "#"},
+        {link: require('@/assets/img/label-shop/label-karusel.svg'),
+        to: "#"},
+        {link: require('@/assets/img/label-shop/label-auchan.svg'),
+        to: "#"}
       ]
     }
   }

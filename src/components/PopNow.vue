@@ -8,8 +8,8 @@
           v-for="card in popnowCarousel"
           :key="card.id"
           class="popnow__card"
-          > <img class="popnow__img popnow__img--shop" :src="card.picture">
-            <img class="popnow__img popnow__img--prod popnow__img--water" :src="card.prodPicture">
+          > <img class="popnow__img popnow__img--shop" :src="card.imgSrc">
+            <img class="popnow__img popnow__img--prod popnow__img--water" :src="card.prodimgSrc">
             <span class="popnow__wrap popnow__wrap--price">
               <p class="popnow__price popnow__price--old">{{card.oldPrice}}</p>
               <p class="popnow__price popnow__price--now">{{card.priceNow}}<span class="popnow__price--grey">{{card.priceGrey}}</span></p>
@@ -34,8 +34,8 @@ export default {
   data() {
     return {
       popnowCarousel: [
-        {picture: require('@/assets/img/label-shop/label-metro.svg'),
-        prodPicture: require('@/assets/img/popnow/main_milk.jpg'),
+        {imgSrc: require('@/assets/img/label-shop/label-metro.svg'),
+        prodimgSrc: require('@/assets/img/popnow/main_milk.jpg'),
         oldPrice: "96,89 p.",
         priceNow: "89",
         priceGrey: ",89 ₽",
@@ -43,8 +43,8 @@ export default {
         volume: "1 л",
         link: "Заказать"
         },
-        {picture: require('@/assets/img/label-shop/label-lenta.svg'),
-        prodPicture: require('@/assets/img/popnow/main_water.png'),
+        {imgSrc: require('@/assets/img/label-shop/label-lenta.svg'),
+        prodimgSrc: require('@/assets/img/popnow/main_water.png'),
         oldPrice: "36,89 p.",
         priceNow: "29",
         priceGrey: "36,89 ₽",
@@ -52,8 +52,8 @@ export default {
         volume: "1,5 л",
         link: "Заказать"
         },
-        {picture: require('@/assets/img/label-shop/label-karusel.svg'),
-        prodPicture: require('@/assets/img/popnow/main_aggs.jpg'),
+        {imgSrc: require('@/assets/img/label-shop/label-karusel.svg'),
+        prodimgSrc: require('@/assets/img/popnow/main_aggs.jpg'),
         oldPrice: "68,88 p.",
         priceNow: "59",
         priceGrey: ",50 ₽",
@@ -61,8 +61,8 @@ export default {
         volume: "630 гр",
         link: "Заказать"
         },
-        {picture: require('@/assets/img/label-shop/label-prisma.svg'),
-        prodPicture: require('@/assets/img/popnow/main_toletPaper.jpg'),
+        {imgSrc: require('@/assets/img/label-shop/label-prisma.svg'),
+        prodimgSrc: require('@/assets/img/popnow/main_toletPaper.jpg'),
         oldPrice: "91.00 p.",
         priceNow: "37",
         priceGrey: ",00 ₽",
@@ -70,8 +70,8 @@ export default {
         volume: "40 гр",
         link: "Заказать"
         },
-        {picture: require('@/assets/img/label-shop/label-auchan.svg'),
-        prodPicture: require('@/assets/img/popnow/main_cola.jpg'),
+        {imgSrc: require('@/assets/img/label-shop/label-auchan.svg'),
+        prodimgSrc: require('@/assets/img/popnow/main_cola.jpg'),
         oldPrice: "99.00 p.",
         priceNow: "61",
         priceGrey: ",00 ₽",
@@ -79,8 +79,8 @@ export default {
         volume: "330 млл",
         link: "Заказать"
         },
-        {picture: require('@/assets/img/label-shop/label-vkusvill.svg'),
-        prodPicture: require('@/assets/img/popnow/main_glass_of_water.jpg'),
+        {imgSrc: require('@/assets/img/label-shop/label-vkusvill.svg'),
+        prodimgSrc: require('@/assets/img/popnow/main_glass_of_water.jpg'),
         oldPrice: "29.99 p.",
         priceNow: "19",
         priceGrey: ",89 ₽",
@@ -88,8 +88,8 @@ export default {
         volume: "1 л",
         link: "Заказать"
         },
-        {picture: require('@/assets/img/label-shop/label-vkusvill.svg'),
-        prodPicture: require('@/assets/img/popnow/main_banana.jpeg'),
+        {imgSrc: require('@/assets/img/label-shop/label-vkusvill.svg'),
+        prodimgSrc: require('@/assets/img/popnow/main_banana.jpeg'),
         oldPrice: "68,88 p.",
         priceNow: "60",
         priceGrey: ",50 ₽",
@@ -97,8 +97,8 @@ export default {
         volume: "1 кг",
         link: "Заказать"
         },
-        {picture: require('@/assets/img/label-shop/label-metro.svg'),
-        prodPicture: require('@/assets/img/popnow/main__onion.jpg'),
+        {imgSrc: require('@/assets/img/label-shop/label-metro.svg'),
+        prodimgSrc: require('@/assets/img/popnow/main__onion.jpg'),
         oldPrice: "28,88 p.",
         priceNow: "18",
         priceGrey: ",50 ₽",
@@ -106,8 +106,8 @@ export default {
         volume: "1 кг",
         link: "Заказать"
         },
-        {picture: require('@/assets/img/label-shop/label-lenta.svg'),
-        prodPicture: require('@/assets/img/popnow/main_tvorog.jpg'),
+        {imgSrc: require('@/assets/img/label-shop/label-lenta.svg'),
+        prodimgSrc: require('@/assets/img/popnow/main_tvorog.jpg'),
         oldPrice: "79,00 p.",
         priceNow: "69",
         priceGrey: ",50 ₽",

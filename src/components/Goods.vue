@@ -6,9 +6,9 @@
 				<router-link
 				v-for="links in goodsLink"
 				:key="links.id"
-				to="#"
+				:to="links.to"
 				class="goods__link goods__link--card"
-				>	<img class="goods__img goods__img--violet" :src="links.picture">
+				>	<img class="goods__img goods__img--violet" :src="links.imgSrc">
 					<p>{{links.text}}</p>
 				</router-link>
 			</div>
@@ -22,35 +22,45 @@ export default {
 	data() {
 		return {
 			goodsLink: [
-				{picture: require('@/assets/img/categories/fruit.png'),
-				text: "Овощи и фрукты"
+				{imgSrc: require('@/assets/img/categories/fruit.png'),
+				text: "Овощи и фрукты",
+				to: "1"
 				},
-				{picture: require('@/assets/img/categories/children.png'),
-				text: "Детские товары"
+				{imgSrc: require('@/assets/img/categories/children.png'),
+				text: "Детские товары",
+				to: "2"
 				},
-        {picture: require('@/assets/img/categories/household.png'),
-				text: "Бытовая химия"
+        {imgSrc: require('@/assets/img/categories/household.png'),
+				text: "Бытовая химия",
+				to: "3"
 				},
-        {picture: require('@/assets/img/categories/milk.png'),
-				text: "Молочные продукты"
+        {imgSrc: require('@/assets/img/categories/milk.png'),
+				text: "Молочные продукты",
+				to: "4"
 				},
-        {picture: require('@/assets/img/categories/bread.png'),
-				text: "Хлеб и выпечка"
+        {imgSrc: require('@/assets/img/categories/bread.png'),
+				text: "Хлеб и выпечка",
+				to: "5"
 				},
-        {picture: require('@/assets/img/categories/semifinished.png'),
-				text: "Полуфабрикаты"
+        {imgSrc: require('@/assets/img/categories/semifinished.png'),
+				text: "Полуфабрикаты",
+				to: "6"
 				},
-        {picture: require('@/assets/img/categories/fish.png'),
-				text: "Рыба и морепродукты"
+        {imgSrc: require('@/assets/img/categories/fish.png'),
+				text: "Рыба и морепродукты",
+				to: "7"
 				},
-        {picture: require('@/assets/img/categories/meat.png'),
-				text: ">Мясо и птица"
+        {imgSrc: require('@/assets/img/categories/meat.png'),
+				text: ">Мясо и птица",
+				to: "8"
 				},
-        {picture: require('@/assets/img/categories/tea.png'),
-				text: "Чай, кофе, какао"
+        {imgSrc: require('@/assets/img/categories/tea.png'),
+				text: "Чай, кофе, какао",
+				to: "9"
 				},
-        {picture: require('@/assets/img/categories/desert.png'),
-				text: "Сладкое"
+        {imgSrc: require('@/assets/img/categories/desert.png'),
+				text: "Сладкое",
+				to: "10"
 				},
 			]
 		}

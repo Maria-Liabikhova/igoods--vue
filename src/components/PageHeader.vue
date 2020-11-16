@@ -7,7 +7,7 @@
 					<router-link
 					v-for="links in headerLinks"
 					:key="links.id"
-					to="#"
+					:to="links.to"
 					class="link link--top link--disappear"
 					>{{links.link}}
 					</router-link>
@@ -96,11 +96,16 @@
 		data() {
 			return {
 				headerLinks: [
-					{link: "Санкт-Петербург и ЛО"},
-					{link: "Список магазинов"},
-					{link: "Как это работает"},
-					{link: "Доставка для бизнеса"},
-					{link: "Войти"},
+					{link: "Санкт-Петербург и ЛО",
+					to: "1"},
+					{link: "Список магазинов",
+					to: "2#"},
+					{link: "Как это работает",
+					to: "3#"},
+					{link: "Доставка для бизнеса",
+					to: "4#"},
+					{link: "Войти",
+					to: "5"},
 				]
 			}
 		}
