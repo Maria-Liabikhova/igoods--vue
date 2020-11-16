@@ -76,13 +76,20 @@
 				</carousel>
 			</section>
 			<section class="wrapper wrapper--shops">
-				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-metro.svg')"></a>
+				<router-link
+				v-for="link in headerShops"
+				:key="link.id"
+				:to="link.to"
+				class="shops__links"
+				><img class="shops__img" :src="link.imgSrc">
+				</router-link>
+				<!-- <a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-metro.svg')"></a>
 				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-lenta.svg')"></a>
 				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-prisma.svg')"></a>
 				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-babylon.svg')"></a>
 				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-vkusvill.svg')"></a>
 				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-karusel.svg')"></a>
-				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-auchan.svg')"></a>
+				<a href="#" class="shops__links"><img class="shops__img" :src="require('@/assets/img/label-shop/label-auchan.svg')"></a> -->
 			</section>
 		</section>
 	</header>
@@ -106,6 +113,22 @@
 					to: "4#"},
 					{link: "Войти",
 					to: "5"},
+				],
+				headerShops: [
+					{imgSrc: require('@/assets/img/label-shop/label-metro.svg'),
+					to: "10"},
+					{imgSrc: require('@/assets/img/label-shop/label-lenta.svg'),
+					to: "2"},
+					{imgSrc: require('@/assets/img/label-shop/label-prisma.svg'),
+					to: "3"},
+					{imgSrc: require('@/assets/img/label-shop/label-babylon.svg'),
+					to: "4"},
+					{imgSrc: require('@/assets/img/label-shop/label-vkusvill.svg'),
+					to: "1"},
+					{imgSrc: require('@/assets/img/label-shop/label-karusel.svg'),
+					to: "1"},
+					{imgSrc: require('@/assets/img/label-shop/label-auchan.svg'),
+					to: "1"}
 				]
 			}
 		}
