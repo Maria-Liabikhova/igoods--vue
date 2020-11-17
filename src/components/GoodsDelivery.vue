@@ -1,6 +1,7 @@
 <template>
   <section class="goods goods--delivery"> 
-		<div class="wrapper wrapper--delivery" style="background-image: url(img/bgd-img-delivery.svg)">
+		<!-- <div class="wrapper wrapper--delivery" style="background-image: url(img/bgd-img-delivery.svg)"> -->
+		<div class="wrapper wrapper--delivery">
 			<div class="goods__coll goods__coll--delivery" >
 				<h2 class="title">Доставка по всему городу</h2>
 				<p class="goods__text goods__text--delivery">Укажите свой адрес и выберите магазин</p>

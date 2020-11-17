@@ -1,6 +1,6 @@
 <template>
   <section class="goods goods--tryit">
-		<div class="wrapper wrapper--tryit" style="background-image: url(img/bg-app.png)">
+		<div class="wrapper wrapper--tryit">
 			<div class="goods__coll goods__coll--tryit" >
 			<h2 class="title goods__nowrap title--start">Попробуйте, это удобно</h2>
 			<p class="goods__text goods__text--tryit">Каталог работает на любой платформе — на сайте, на Android и на iOS. Удобнее всего собирать корзину в мобильном приложении: скидки, адреса и отслеживание заказа всегда под рукой</p>
