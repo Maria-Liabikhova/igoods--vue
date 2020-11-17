@@ -6,18 +6,20 @@
 					<h2 class="title title--start">Как происходит доставка продуктов из магазинов</h2>
 					<p class="goods__text goods__text--small">Вместо двух- (а то и четырёх-) часовой поездки в супермаркет Вы получаете товары и свежие продукты на дом по ценам магазина, в удобное для Вас время, ожидая курьера не более 25 минут!</p>
 					<ol class="goods__list">
-						<li class="goods__text goods__text--tryit goods__text--howdeliver">Заказ производится через сайт или мобильное приложение интернет-магазина продуктов igooods. Цены в каталоге равны ценам в гипермаркетах Санкт-Петербурга: METRO, ЛЕНТА, PRISMA, ВКУСВИЛЛ, КАРУСЕЛЬ, АШАН и ценам Super Babylon (кроме 4% позиций от общего количества товаров этой сети), включая акционные товары. Оплата заказа - при получении.</li>
-						<li class="goods__text goods__text--tryit goods__text--howdeliver">Вы выбираете доступное время доставки. Обычно все делают выбор в пользу доставки в тот же день, и как можно быстрее. Мы стараемся привезти ваш заказ точно к назначенному времени, но отклонение может составить плюс-минус 25 минут. Вы можете отслеживать комплектацию и доставку продуктов питания в Личном кабинете в режиме реального времени.</li>
-						<li class="goods__text goods__text--tryit goods__text--howdeliver">В торговом зале магазина Ваш заказ собирает Персональный Закупщик igooods. Внимательно и придирчиво. Как для себя! Молочные продукты самые свежие, с максимальной датой (из глубин полки, конечно же!), яйца внутри упаковки целые, овощи-фрукты посимпатичнее и т.д.</li>
-						<li class="goods__text goods__text--tryit goods__text--howdeliver">Если, пока шёл заказ, какой-то товар или продукт из ассортимента интернет-магазина закончился или у всей партии плохой товарный вид, Персональный Закупщик позвонит Вам, объяснит ситуацию и предложит варианты замен.</li>
+						<li
+						v-for="item in howDeliverListFirst"
+						:key="item.id"
+						class="goods__text goods__text--tryit goods__text--howdeliver"
+						>{{item.text}}</li>
 					</ol>
 					<h2 class="title">Начните экономить с igooods в Санкт-Петербурге уже сегодня!</h2>
 					<p class="goods__text goods__text--small">Как изменятся ваши траты при заказе доставки еды и прочих товаров через интернет-магазин igooods? Ваши "транспортные расходы" увеличатся всего на 50-150 рублей (стоимость доставки минус ваша обычная стоимость проезда от дома до гипермаркета на общественном транспорте либо на автомобиле).</p>
 					<ol class="goods__list">
-						<li class="goods__text goods__text--tryit goods__text--howdeliver"> Перейдите в каталог igooods или скачайте наше приложение:</li>
-						<li class="goods__text goods__text--tryit goods__text--howdeliver"> Введите название улицы и номер дома; система покажет вам список магазинов продуктов с доставкой от сервиса igooods, доступных по вашему адресу. Выберите продуктовый магазин из этого списка.</li>
-						<li class="goods__text goods__text--tryit goods__text--howdeliver">Регистрируйтесь, добавляйте товары и продукты в онлайн-корзину, формируйте заказ, в случае любых затруднений звоните по телефону горячей линии в Санкт-Петербурге: <br>8 (812) 504 89 52 (с 10.00 до 23.00 ежедневно)</li>
-						<li class="goods__text goods__text--tryit goods__text--howdeliver">Купите продукты с доставкой на дом по льготной цене 199 рублей для первого заказа!</li>
+						<li
+						v-for="item in howDeliverListSecond"
+						:key="item.id"
+						class="goods__text goods__text--tryit goods__text--howdeliver"
+						>{{item.text}}</li>
 					</ol>
 				</div>
 				<button  @click="isCollapse = !isCollapse" class="goods__button goods__button--tryit goods__button--howdeliver">Узнать больше</button>
@@ -36,6 +38,7 @@ export default {
     return {
       isCollapse: false,
     }
-  },
+	},
+	props: ['howDeliverListFirst', 'howDeliverListSecond']
 }
 </script>
