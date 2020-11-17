@@ -14,9 +14,3 @@
 		</div>
 	</section>
 </template>
-
-<style scoped>
-/* .wrapper--tryit {
-  background-image: url('/img/bg-app.png');
-  } */
-</style>
