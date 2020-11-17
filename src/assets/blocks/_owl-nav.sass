@@ -1,12 +1,25 @@
 // owl-nav
 .owl-nav
-  .owl-prev, .owl-next
-    font-size: 30px
-    color: $dark-green
-    background-color: lighten($turquoise, 10%)
+  .owl-prev
+    color: $dark-green !important
+    background-color: lighten($turquoise, 10%) !important
     height: 50px
     width: 50px
-    border-radius: 50%
+    border-radius: 50%  !important
+    position: absolute
+    line-height: 40px 
+    transform: translateX(50%)
+    top: calc( 50% - 25px )
+    right: 0
+    transition: all .3s ease
+    &:hover
+      background-color: $turquoise !important
+  .owl-next
+    color: $dark-green !important
+    background-color: lighten($turquoise, 10%) !important
+    height: 50px
+    width: 50px
+    border-radius: 50% !important
     position: absolute
     line-height: 40px
     transform: translateX(-50%)
@@ -14,10 +27,7 @@
     left: 0
     transition: all .3s ease
     &:hover
-      background-color: $turquoise
-  .owl-next
-    left: 100%
-    border: none
-.owl-item
-  overflow: hidden
+      background-color: $turquoise !important
+// .owl-item
+//   overflow: hidden
 // owl-nav END

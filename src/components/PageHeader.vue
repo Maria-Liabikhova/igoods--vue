@@ -42,7 +42,7 @@
 				<router-link
 				v-for="link in headerShops"
 				:key="link.id"
-				:to="link.to"
+				:to="link.href"
 				class="shops__links"
 				><img class="shops__img" :src="link.imgSrc">
 				</router-link>

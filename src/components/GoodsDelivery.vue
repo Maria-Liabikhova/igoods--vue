@@ -16,7 +16,7 @@
           <router-link
             v-for="links in linkShops"
             :key="links.id"
-            :to="links.to"
+            :to="links.href"
             class="goods__link goods__link--shops"
             ><img class="goods__img goods__img--shops" :src="links.link">
           </router-link>

@@ -9,7 +9,7 @@
         <router-link
         v-for="link in serviseLinks"
         :key="link.id"
-        :to="link.to"
+        :to="link.href"
         class="footer__link footer__link--servises link"
         >{{link.link}}
         </router-link>
@@ -18,7 +18,7 @@
         <router-link
         v-for="link in deliveryLinks"
         :key="link.id"
-        :to="link.to"
+        :to="link.href"
         class="footer__link link"
         >{{link.link}}
         </router-link>
@@ -31,7 +31,7 @@
             <router-link
             v-for="link in footerIcons"
             :key="link.id"
-            :to="link.to"
+            :to="link.href"
             class="footer__link footer__link--icon link"
             ><img class="footer__icon" :src="link.link">
             </router-link>

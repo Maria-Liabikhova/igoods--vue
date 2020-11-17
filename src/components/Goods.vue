@@ -6,7 +6,7 @@
 				<router-link
 				v-for="links in goodsLink"
 				:key="links.id"
-				:to="links.to"
+				:to="links.href"
 				class="goods__link goods__link--card"
 				>	<img class="goods__img goods__img--violet" :src="links.imgSrc">
 					<p>{{links.text}}</p>
