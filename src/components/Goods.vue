@@ -51,7 +51,7 @@ export default {
 				to: "7"
 				},
         {imgSrc: require('@/assets/img/categories/meat.png'),
-				text: ">Мясо и птица",
+				text: "Мясо и птица",
 				to: "8"
 				},
         {imgSrc: require('@/assets/img/categories/tea.png'),

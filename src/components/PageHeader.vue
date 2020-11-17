@@ -21,7 +21,6 @@
 			<section class="wrapper wrapper--profits">
 				<carousel class="profits__carousel"	
 				:dots="false"	:loop="true" :autoplay="true"	:pullDrag="false"	:margin="10" :responsive="{0:{items:1.2,nav:false},992:{items:2,nav:true},1280:{items:1,nav:true}}">
-
 				<div
 				v-for="slide in headerCarousel"
 				:key="slide.id"
