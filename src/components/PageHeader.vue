@@ -7,7 +7,7 @@
 					<router-link
 					v-for="links in headerLinks"
 					:key="links.id"
-					:to="links.to"
+					:to="links.href"
 					class="link link--top link--disappear"
 					>{{links.link}}
 					</router-link>
@@ -20,7 +20,7 @@
 		<section class="header__container">
 			<section class="wrapper wrapper--profits">
 				<carousel class="profits__carousel"	
-				:dots="false" :smartSpeed="700"	:loop="true" :autoplay="true"	:pullDrag="false"	:margin="10" :responsive="{0:{items:1.2,nav:false},992:{items:2,nav:true},1280:{items:1,nav:true}}">
+				:dots="false" :smartSpeed="900"	:loop="true" :autoplay="true"	:pullDrag="false"	:margin="10" :responsive="{0:{items:1.2,nav:false},992:{items:2,nav:true},1280:{items:1,nav:true}}">
 				<div
 				v-for="slide in headerCarousel"
 				:key="slide.id"
@@ -55,7 +55,7 @@
 import carousel from 'vue-owl-carousel'
 
 export default {
-	props:["headerLinks", "headerShops", "headerCarousel"],
+	props: ["headerLinks", "headerShops", "headerCarousel"],
 	components: { carousel },
 }
 </script>

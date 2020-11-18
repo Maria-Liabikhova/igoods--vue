@@ -1,5 +1,5 @@
 <template>
-  <div id="Home">
+  <div>
     <PageHeader :headerLinks="headerLinks" :headerShops="headerShops" :headerCarousel="headerCarousel" /> 
     <Goods :goodsLink="goodsLink"/>
     <GoodsBlue />
@@ -65,7 +65,7 @@ export default {
         linkSecondText: "Выбрать магазин",
         img: require('@/assets/img/bgi-delivery.png'),
         imgClass: "profits__img--delivery",
-        classFirstLink: "link--buthrefn"
+        classFirstLink: "link--button"
         },
         {class: "profits__wrap--catalog",
         firstRow: "самый",
@@ -79,7 +79,7 @@ export default {
         linkSecondText: "Выбрать магазин",
         img: require('@/assets/img/bgi-catalog.png'),
         imgClass: "profits__img--catalog",
-        classFirstLink: "link--buthrefn"
+        classFirstLink: "link--button"
         },
         {class: "profits__wrap--pack",
         firstRow: "Фасуем товар",
@@ -92,7 +92,7 @@ export default {
         linkSecondText: "Заказать доставку",
         img: require('@/assets/img/bgi-pack.png'),
         imgClass: "profits__img--catalog",
-        classFirstLink: "link--buthrefn"
+        classFirstLink: "link--button"
         },
         {class: "profits__wrap--app",
         firstRow: "Приложение",
@@ -118,7 +118,7 @@ export default {
         linkSecondText: "Выбрать магазин",
         img: require('@/assets/img/bgi-office.png'),
         imgClass: "profits__img--catalog",
-        classFirstLink: " link--buthrefn link--wide"
+        classFirstLink: " link--button link--wide"
         },
       ],
       linkShops: [
