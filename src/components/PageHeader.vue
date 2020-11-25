@@ -60,14 +60,14 @@
 						<img class="profits__img" :class="slide.imgClass" :src="slide.img">
 					</div>
 				</tiny-slider> -->
-			<tiny-slider >
+			<div class="tiny-slider" >
 				<div>Slider item #1</div>
 				<div>Slider item #2</div>
 				<div>Slider item #3</div>
 				<div>Slider item #4</div>
 				<div>Slider item #5</div>
 				<div>Slider item #6</div>
-			</tiny-slider>
+			</div>
 
 			</section>
 			<section class="wrapper wrapper--shops">
