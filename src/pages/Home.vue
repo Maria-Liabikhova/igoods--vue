@@ -3,7 +3,8 @@
     <PageHeader :headerLinks="headerLinks" :headerShops="headerShops" :headerCarousel="headerCarousel" /> 
     <Goods :goodsLink="goodsLink"/>
     <GoodsBlue />
-    <PopNow :popnowCarousel="popnowCarousel"/>
+    <!-- <PopNow :popnowCarousel="popnowCarousel"/> -->
+    <PopNow />
     <GoodsDelivery :linkShops="linkShops"/>
     <GoodsTryit />
     <HowDeliver :howDeliverListFirst="howDeliverListFirst"  :howDeliverListSecond="howDeliverListSecond"/>
