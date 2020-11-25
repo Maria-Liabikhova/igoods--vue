@@ -37,13 +37,19 @@
 					<img class="profits__img" :class="slide.imgClass" :src="slide.img">
 				</div>
 				</carousel> -->
-				<splide class="profits__carousel"	:loop="true" :autoplay="true" >
-					<splide-slide
-					v-for="slide in headerCarousel"
-					:key="slide.id"
-					class="profits__wrap"
-					:class="slide.class"
-					>	<div class="profits__discription">
+
+
+
+				<!-- <tiny-slider class="profits__carousel"
+				:mouse-drag="true" :loop="false" items="2" gutter="20"
+				>
+				<div
+				v-for="slide in headerCarousel"
+				:key="slide.id"
+				class="profits__wrap"
+				:class="slide.class"
+				>
+					<div class="profits__discription">
 							<h2 class="profits__title">{{slide.firstRow}}<br>{{slide.secondRow}}<br>{{slide.thirdRow}}</h2>
 							<p class="profits__text">{{slide.firstTextRow}}<br>{{slide.secondTextRow}}<br>{{slide.thirdTextRow}}</p>
 							<div class="profits__link-wrap">
@@ -52,8 +58,18 @@
 							</div>
 						</div>
 						<img class="profits__img" :class="slide.imgClass" :src="slide.img">
-					</splide-slide>
-				</splide>
+					</div>
+				</tiny-slider> -->
+
+				<tiny-slider  items="1" gutter="5">
+					<div>h1</div>
+					<div>Slider item #2</div>
+					<div>Slider item #3</div>
+					<div>Slider item #4</div>
+					<div>Slider item #5</div>
+					<div>Slider item #6</div>
+				</tiny-slider>
+
 			</section>
 			<section class="wrapper wrapper--shops">
 				<router-link
@@ -69,11 +85,13 @@
 </template>
 
 <script>
-// import carousel from 'vue-owl-carousel'
+import VueTinySlider from 'vue-tiny-slider';
+
 
 export default {
 	props: ["headerLinks", "headerShops", "headerCarousel"],
-	// props: ["headerLinks", "headerShops"],
-	// components: { carousel },
+	components: {
+		'tiny-slider': VueTinySlider
+	}
 }
 </script>
