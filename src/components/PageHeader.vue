@@ -19,13 +19,13 @@
 		</section>
 		<section class="header__container">
 			<section class="wrapper wrapper--profits">
-				<tiny-slider :v-bind="options" class="sliders">
+				<tiny-slider v-bind="options" class="sliders">
 						<div
 						v-for="slide in headerCarousel"
 						:key="slide.id"
 						class="profits__wrap"
 						:class="slide.class"
-						> 
+						>
 							<div class="profits__discription">
 								<h2 class="profits__title">{{slide.firstRow}}<br>{{slide.secondRow}}<br>{{slide.thirdRow}}</h2>
 								<p class="profits__text">{{slide.firstTextRow}}<br>{{slide.secondTextRow}}<br>{{slide.thirdTextRow}}</p>
@@ -58,19 +58,19 @@ export default {
 	components: {'tiny-slider': VueTinySlider},
 	data() {
     return {
-      options: {
-				preventScrollOnTouch: 'auto',
-				items: 1,
-        // autoWidth: true,
+			options: {
+				// preventScrollOnTouch: 'auto',
+				items: 2,
         mouseDrag: true,
         loop: true,
-        gutter: 2,
-        controls: false,
-        nav: true,
-        edgePadding: 2
+        // gutter: 10,
+				navItems: true,
+				nav: false,
+				// autoplay: true
       }
     }
   }
 };
 
+				// :dots="false" :smartSpeed="900"	:loop="true" :autoplay="true"	:pullDrag="false"	:margin="10" :responsive="{0:{items:1.2,nav:false},992:{items:2,nav:true},1280:{items:1,nav:true}}"
 </script>

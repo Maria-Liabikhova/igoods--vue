@@ -15,7 +15,6 @@
     "core-js": "^3.7.0",
     "tiny-slider": "^2.9.3",
     "vue": "^2.6.12",
-    "vue-owl-carousel": "^2.0.3",
     "vue-router": "^3.4.9",
     "vue-tiny-slider": "^0.1.39",
     "vuex": "^3.5.1"
