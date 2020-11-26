@@ -2,13 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import store from "./store";
 import router from "./router";
-import VueTinySlider from 'vue-tiny-slider';
 
-new Vue({
-  components: {
-    'tiny-slider': VueTinySlider
-  }
-})
 
 
 import './assets/main.sass';
