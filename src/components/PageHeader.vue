@@ -59,14 +59,18 @@ export default {
 	data() {
     return {
 			options: {
-				// preventScrollOnTouch: 'auto',
-				items: 2,
+				fixedWidth: true,
+				items: 1,
+				slideBy: "page",
         mouseDrag: true,
         loop: true,
         // gutter: 10,
-				navItems: true,
+				// navItems: true,
 				nav: false,
-				// autoplay: true
+				swipeAngle: false,
+				autoplay: true,
+				autoplayButtonOutput: false,
+				speed: 400,
       }
     }
   }
@@ -74,3 +78,9 @@ export default {
 
 				// :dots="false" :smartSpeed="900"	:loop="true" :autoplay="true"	:pullDrag="false"	:margin="10" :responsive="{0:{items:1.2,nav:false},992:{items:2,nav:true},1280:{items:1,nav:true}}"
 </script>
+<style scoped>
+.tns-inner {
+	width: 100%;
+	border: 1 px solid red;
+}
+</style>
