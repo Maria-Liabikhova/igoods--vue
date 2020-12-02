@@ -38,7 +38,7 @@
 						</div>
 				</tiny-slider>
 				<div class="nav nav--prev"><i class="fa fa-angle-double-up"></i></div>
-				<div class="nav nav--next">Z</div>
+				<div class="nav nav--next">Y</div>
 				<!-- <div class="nav"><i class="fa fa-angle-double-up"></i></div> -->
 			</section>
 			<section class="wrapper wrapper--shops">
