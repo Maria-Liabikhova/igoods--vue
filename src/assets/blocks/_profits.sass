@@ -7,6 +7,7 @@
     overflow: hidden
     background-size: cover
     background-position: center
+    position: relative
     @media only screen and ( max-width: 1279px)
       background-position: -40px
     @media only screen and ( max-width: 767px)
@@ -44,12 +45,13 @@
       margin-bottom: 25px
       flex-direction: column
   &__img
-    height: 380px !important
-    width: auto !important
+    height: 380px
+    width: auto
     &--delivery
-      height: 380px !important
-      width: auto !important
+      height: 380px
+      width: auto
       position: absolute
+      z-index: 1000
       left: 500px
       bottom: 50px
       @media only screen and ( max-width: 1279px)
@@ -57,33 +59,33 @@
       @media only screen and ( max-width: 991px)
         left: 360px
       @media only screen and ( max-width: 767px)
-        height: 250px !important
+        height: 250px
         left: 300px
     &--soc
-      height: 50px !important
+      height: 50px
       position: relative
       @media only screen and ( max-width: 1279px)
-        height: 40px !important
+        height: 40px
         left: 0
       @media only screen and ( max-width: 767px)
         height: 32px !important
       @media only screen and ( max-width: 479px)
-        display: block !important
+        display: block
     &--phone
       right: 70px
       bottom: 0
       position: absolute
       @media only screen and ( max-width: 1279px)
-        height: 400px !important
-        right: 0 !important
+        height: 400px
+        right: 0
       @media only screen and ( max-width: 991px)
         left: 400px
       @media only screen and ( max-width: 767px)
         left: 300px
-        height: 290px !important
+        height: 290px
       @media only screen and ( max-width: 479px)
         left: 200px
-        height: 250px !important
+        height: 250px
     &--catalog
       position: absolute
       left: 200px

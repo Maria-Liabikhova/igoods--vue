@@ -34,9 +34,12 @@
 									<router-link to="slide.linkSecond" class="link link--violet">{{slide.linkSecondText}}<img class="profits__img profits__img--soc" :src="slide.secondtlinkImg"></router-link>
 								</div>
 							</div> 
-							<!-- <img class="profits__img" :class="slide.imgClass" :src="slide.img"> -->
+							<img class="profits__img" :class="slide.imgClass" :src="slide.img">
 						</div>
 				</tiny-slider>
+				<div class="nav nav--prev"><i class="fa fa-angle-double-up"></i></div>
+				<div class="nav nav--next">Z</div>
+				<!-- <div class="nav"><i class="fa fa-angle-double-up"></i></div> -->
 			</section>
 			<section class="wrapper wrapper--shops">
 				<router-link
@@ -65,18 +68,17 @@ export default {
         mouseDrag: true,
         loop: true,
         // gutter: 10,
-				// navItems: true,
 				nav: false,
+				controls: false,
 				swipeAngle: false,
-				autoplay: true,
+				// autoplay: true,
 				autoplayButtonOutput: false,
-				speed: 400,
+				// speed: 400,
       }
     }
   }
 };
 
-				// :dots="false" :smartSpeed="900"	:loop="true" :autoplay="true"	:pullDrag="false"	:margin="10" :responsive="{0:{items:1.2,nav:false},992:{items:2,nav:true},1280:{items:1,nav:true}}"
 </script>
 <style scoped>
 .tns-inner {
