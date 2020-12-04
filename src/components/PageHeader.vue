@@ -37,8 +37,8 @@
 							<img class="profits__img" :class="slide.imgClass" :src="slide.img">
 						</div>
 				</tiny-slider>
-				<div class="nav nav--prev"><i class="fa fa-angle-double-up"></i></div>
-				<div class="nav nav--next">Y</div>
+				<div class="nav nav--prev"><font-awesome-icon icon="angle-double-left"/></div>
+				<div class="nav nav--next"><font-awesome-icon icon="angle-double-right"/></div>
 				<!-- <div class="nav"><i class="fa fa-angle-double-up"></i></div> -->
 			</section>
 			<section class="wrapper wrapper--shops">
