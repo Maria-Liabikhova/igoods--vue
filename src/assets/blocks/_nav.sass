@@ -12,9 +12,14 @@
   text-align: center
   cursor: pointer
   top: calc( 50% - 25px )
+  outline: none
+  border: none
   &:hover
     transition: all .25s ease
     background-color: $turquoise
+  &:active, &:focus
+    outline: none
+    border: none
   &--prev
     transform: translateX(-50%)
     left: 60px

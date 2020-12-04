@@ -312,7 +312,7 @@ export default {
     }
   },
   components: {
-    PageHeader, Goods, GoodsBlue, PopNow, GoodsDelivery, GoodsTryit, HowDeliver, Footer
+    PageHeader, Goods, GoodsBlue, PopNow, GoodsDelivery, GoodsTryit, HowDeliver, Footer, 
   }
 }
 </script>
