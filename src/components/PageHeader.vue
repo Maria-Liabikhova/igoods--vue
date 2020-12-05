@@ -1,11 +1,13 @@
 <template>
 	<div>
-		<section class="h-menu" >
-      <div class="h-menu__wrap">
+		<section class="h-menu" 
+		:class="{'active': isActive}">
+      <div class="h-menu__wrap"
+			:class="{'active': isActive}">
         <div class="wrapper wrapper--h-menu">
           <div class="h-menu__inner h-menu__inner--top">
             <a href="#" class="link link--h-menu link--h-menu--top"><i class="fa fa-sign-in h-menu__icon"></i><p class="h-menu__text">Войти</p></a>
-            <button class="h-menu__button h-menu__button--close"></button>
+            <button @click="isActive = !isActive" class="h-menu__button h-menu__button--close"></button>
           </div>
            <div class="h-menu__inner h-menu__inner--info">
             <a href="#" class="link link--h-menu"><h3 class="h-menu__subject">Список магазинов</h3></a>
@@ -54,7 +56,7 @@
 						<router-link to="#" href="#" class="link link--button link--small link--disappear">Заказать доставку</router-link>
 					</div>
 					<button
-					v-on:click="openHmenu" class="hamburger" type="menu"
+					@click="isActive = !isActive" class="hamburger" type="menu"
 					>
 					</button>
 				</div>
@@ -117,14 +119,9 @@ export default {
 				autoplayButtonOutput: false,
 				speed: 400,
 			},
-			classActiv: "active"
+			isActive: false
     }
 	},
-	methods: {
-		onChangeSlide(direction) {
-			return this.$refs.sliderProfits.slider.goTo(direction)
-		},
-	}
 };
 
 </script>
