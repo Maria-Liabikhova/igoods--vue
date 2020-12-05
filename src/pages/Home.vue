@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageHeader :headerLinks="headerLinks" :headerShops="headerShops" :headerCarousel="headerCarousel" /> 
+    <PageHeader :headerLinks="headerLinks" :headerShops="headerShops" :headerCarousel="headerCarousel" :hmenuLinks="hmenuLinks"/> 
     <Goods :goodsLink="goodsLink"/>
     <GoodsBlue />
     <PopNow :popnowCarousel="popnowCarousel"/>
@@ -36,6 +36,38 @@ export default {
         {link: "Войти",
         href: "#"},
       ],
+      hmenuLinks: [
+				{text: "Акции и скидки",
+        htef: "#"
+        },
+        {text: "Выбор товара и оплата",
+        htef: "#"
+        },
+        {text: "Доставка",
+        htef: "#"
+        },
+        {text: "Доставка для бизнеса",
+        htef: "#"
+        },
+        {text: "Обмен и возврат товара",
+        htef: "#"
+        },
+        {text: "Партнерство",
+        htef: "#"
+        },
+        {text: "Персональные данные",
+        htef: "#"
+        },
+        {text: "Пользовательское соглашение",
+        htef: "#"
+        },
+        {text: "Работа в igoods",
+        htef: "#"
+        },
+        {text: "Реквизиты франчайзи",
+        htef: "#"
+        },
+			],
       headerShops: [
         {imgSrc: require('@/assets/img/label-shop/label-metro.svg'),
         href: "#"},

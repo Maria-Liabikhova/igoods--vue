@@ -86,10 +86,22 @@
   &--h-menu
     display: flex
     color: $grey
+    width: 20px
     &:hover, &:active, &:visited, &:focus
       color: $grey
     &--top 
       margin-bottom: 25px
     &--bottom
-      margin-right: 15px
-// link-button END
+      margin-right: 10px
+      border-radius: 50%
+      height: 40px
+      width: 40px
+      display: flex
+      justify-content: center
+      align-items: center
+      transition: all .3s ease
+      color: $dark-green
+      background-color: $turquoise
+      &:hover
+        transition: all .3s ease
+        background-color: lighten($turquoise, 7)

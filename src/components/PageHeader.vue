@@ -6,35 +6,31 @@
 			:class="{'active': isActive}">
         <div class="wrapper wrapper--h-menu">
           <div class="h-menu__inner h-menu__inner--top">
-            <a href="#" class="link link--h-menu link--h-menu--top"><i class="fa fa-sign-in h-menu__icon"></i><p class="h-menu__text">Войти</p></a>
+            <a href="#" class="link link--h-menu link--h-menu--top"><font-awesome-icon class="h-menu__icon" icon="sign-in-alt"/><p class="h-menu__text">Войти</p></a>
             <button @click="isActive = !isActive" class="h-menu__button h-menu__button--close"></button>
           </div>
            <div class="h-menu__inner h-menu__inner--info">
             <a href="#" class="link link--h-menu"><h3 class="h-menu__subject">Список магазинов</h3></a>
             <a href="#" class="link link--h-menu"><h3 class="h-menu__subject">Как это работает</h3></a>
-            <ul class="h-menu__list">
-              <li class="h-menu__item"><a href="#" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">Акции и скидки</p></a></li>
-              <li class="h-menu__item"><a href="#" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">Выбор товара и оплата</p></a></li>
-              <li class="h-menu__item"><a href="#" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">Доставка</p></a></li>
-              <li class="h-menu__item"><a href="#" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">Доставка для бизнеса</p></a></li>
-              <li class="h-menu__item"><a href="#" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">Обмен и возврат товара</p></a></li>
-              <li class="h-menu__item"><a href="#" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">Партнерство</p></a></li>
-              <li class="h-menu__item"><a href="#" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">Персональные данные</p></a></li>
-              <li class="h-menu__item"><a href="#" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">Пользовательское соглашение</p></a></li>
-              <li class="h-menu__item"><a href="#" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">Работа в igoods</p></a></li>
-              <li class="h-menu__item"><a href="#" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">Реквизиты франчайзи</p></a></li>
+            <ul class="h-menu__list"
+						v-for="link in hmenuLinks"
+						:key="link.id"
+						>
+              <li class="h-menu__item"><router-link to="link.href" class="link link--h-menu"><p class="h-menu__text h-menu__text--info">{{link.text}}</p></router-link></li>
             </ul>
           </div>
           <div class="h-menu__inner h-menu__inner--bottom">
             <div class="footer__coll footer__coll--icons">
               <p class="footer__text footer__text--bold h-menu__subject--phone">8 (812) 504 89 52</p>
               <p class="h-menu__text h-menu__text--bottom">с 10:00 до 23:00 ежедневно</p>
-              <div class="footer__wrap">
-                <a class="link link--h-menu link--h-menu--bottom" href="#"><i class="h-menu__soc fa fa-instagram"></i></a>
-                <a class="link link--h-menu link--h-menu--bottom" href="#"><i class="h-menu__soc fa fa-facebook"></i></a>
-                <a class="link link--h-menu link--h-menu--bottom" href="#"><i class="h-menu__soc fa fa-vk"></i></a>
-                <a class="link link--h-menu link--h-menu--bottom" href="#"><i class="h-menu__soc fa fa-telegram"></i></a>
-              </div>
+							<div class="footer__wrapper">
+								<div class="footer__wrap"
+								v-for="icons in hmenuIcon"
+								:key="icons.id"
+								>
+									<router-link to="icons.href" class="link link--h-menu link--h-menu--bottom"><img class="h-menu__soc" :src="icons.icon"></router-link> 
+								</div>
+							</div>
             </div>
           </div>
         </div>
@@ -57,7 +53,7 @@
 					</div>
 					<button
 					@click="isActive = !isActive" class="hamburger" type="menu"
-					>
+					><font-awesome-icon icon="bars"/>
 					</button>
 				</div>
 			</section>
@@ -101,7 +97,7 @@
 <script>
 import VueTinySlider from 'vue-tiny-slider';
 export default {
-	props: ["headerLinks", "headerShops", "headerCarousel"],
+	props: ["headerLinks", "headerShops", "headerCarousel", "hmenuLinks"],
 	components: {'tiny-slider': VueTinySlider},
 	data() {
     return {
@@ -119,9 +115,24 @@ export default {
 				autoplayButtonOutput: false,
 				speed: 400,
 			},
-			isActive: false
+			isActive: false,
+			hmenuIcon: [
+			 {icon: require('@/assets/img/instagram-brands.svg'),
+        href: "#"},
+        {icon: require('@/assets/img/vk-brands.svg'),
+        href: "#"},
+        {icon: require('@/assets/img/telegram-plane-brands.svg'),
+        href: "#"},
+        {icon: require('@/assets/img/facebook-f-brands.svg'),
+				href: "#"},
+			]
     }
 	},
+	methods: {
+		onChangeSlide(direction) {
+			return this.$refs.sliderProfits.slider.goTo(direction)
+		}
+	}
 };
 
 </script>
@@ -131,15 +142,3 @@ export default {
 	border: 1 px solid red;
 }
 </style>
-
-
-// $(".hamburger").click(function() {
-//     $(".h-menu").addClass('active');
-//     $('.h-menu__wrap').addClass('active')
-//     $('.body').addClass('fixed');
-//   });
-//   $(".h-menu__button--close").click(function() {
-//     $(".h-menu").removeClass('active');
-//     $(".h-menu__wrap").removeClass('active')
-//     $('.body').removeClass('fixed');
-//   });
