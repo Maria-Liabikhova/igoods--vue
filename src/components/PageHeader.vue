@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div >
 		<section class="h-menu" 
 		:class="{'active': isActive}">
       <div class="h-menu__wrap"
@@ -7,7 +7,7 @@
         <div class="wrapper wrapper--h-menu">
           <div class="h-menu__inner h-menu__inner--top">
             <a href="#" class="link link--h-menu link--h-menu--top"><font-awesome-icon class="h-menu__icon" icon="sign-in-alt"/><p class="h-menu__text">Войти</p></a>
-            <button @click="isActive = !isActive" class="h-menu__button h-menu__button--close"></button>
+            <button @click="onClose()" class="h-menu__button h-menu__button--close"></button>
           </div>
            <div class="h-menu__inner h-menu__inner--info">
             <a href="#" class="link link--h-menu"><h3 class="h-menu__subject">Список магазинов</h3></a>
@@ -52,7 +52,8 @@
 						<router-link to="#" href="#" class="link link--button link--small link--disappear">Заказать доставку</router-link>
 					</div>
 					<button
-					@click="isActive = !isActive" class="hamburger" type="menu"
+					@click="onShow()" 
+					class="hamburger" type="menu"
 					><font-awesome-icon icon="bars"/>
 					</button>
 				</div>
@@ -131,6 +132,16 @@ export default {
 	methods: {
 		onChangeSlide(direction) {
 			return this.$refs.sliderProfits.slider.goTo(direction)
+		},
+		onShow() {
+			console.log("hi")
+			this.isActive = true
+			document.body.classList.add('noScroll')
+		},
+		onClose() {
+			console.log("bye")
+			this.isActive = false
+			document.body.classList.remove('noScroll')
 		}
 	}
 };
@@ -141,4 +152,5 @@ export default {
 	width: 100%;
 	border: 1 px solid red;
 }
+
 </style>

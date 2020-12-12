@@ -2,10 +2,10 @@
   <div>
     <PageHeader :headerLinks="headerLinks" :headerShops="headerShops" :headerCarousel="headerCarousel" :hmenuLinks="hmenuLinks"/> 
     <Goods :goodsLink="goodsLink"/>
-    <GoodsBlue />
-    <PopNow :popnowCarousel="popnowCarousel"/>
-    <GoodsDelivery :linkShops="linkShops"/>
-    <GoodsTryit />
+    <HowItWorks />
+    <Popular :popnowCarousel="popnowCarousel"/>
+    <Delivery :linkShops="linkShops"/>
+    <TryIt />
     <HowDeliver :howDeliverListFirst="howDeliverListFirst"  :howDeliverListSecond="howDeliverListSecond"/>
     <Footer :serviseLinks="serviseLinks" :deliveryLinks="deliveryLinks" :footerIcons="footerIcons"/>
   </div>
@@ -14,10 +14,10 @@
 <script>
 import PageHeader from '@/components/PageHeader'
 import Goods from '@/components/Goods'
-import GoodsBlue from '@/components/GoodsBlue'
-import PopNow from '@/components/PopNow'
-import GoodsDelivery from '@/components/GoodsDelivery'
-import GoodsTryit from '@/components/GoodsTryit'
+import HowItWorks from '@/components/HowItWorks'
+import Popular from '@/components/Popular'
+import Delivery from '@/components/Delivery'
+import TryIt from '@/components/TryIt'
 import HowDeliver from '@/components/HowDeliver'
 import Footer from '@/components/Footer'
 export default {
@@ -186,7 +186,7 @@ export default {
 				text: "Хлеб и выпечка",
 				href: "#"},
         {imgSrc: require('@/assets/img/categories/semifinished.png'),
-				text: "#олуфабрикаты",
+				text: "Полуфабрикаты",
 				href: "6"},
         {imgSrc: require('@/assets/img/categories/fish.png'),
 				text: "Рыба и морепродукты",
@@ -344,7 +344,7 @@ export default {
     }
   },
   components: {
-    PageHeader, Goods, GoodsBlue, PopNow, GoodsDelivery, GoodsTryit, HowDeliver, Footer, 
+    PageHeader, Goods, HowItWorks, Popular, Delivery, TryIt, HowDeliver, Footer, 
   }
 }
 </script>

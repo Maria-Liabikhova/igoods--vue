@@ -14,3 +14,11 @@
 		</div>
 	</section>
 </template>
+
+<script>
+export default {
+name: "TryIt",
+// data() {
+// 	}
+}
+</script>

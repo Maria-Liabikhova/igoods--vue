@@ -30,8 +30,8 @@
 
 <script>
 import VueTinySlider from 'vue-tiny-slider'
-
 export default {
+  name: "Popular",
   components: {'tiny-slider': VueTinySlider },
   props: ['popnowCarousel'],
   data() {
@@ -42,13 +42,12 @@ export default {
 				slideBy: "page",
         mouseDrag: true,
         loop: true,
-        // gutter: 10,
 				nav: false,
 				controls: false,
 				swipeAngle: false,
-				// autoplay: true,
+				autoplay: true,
 				autoplayButtonOutput: false,
-        // speed: 400,
+        speed: 400,
         responsive: {
           0: {
             items: 1.5

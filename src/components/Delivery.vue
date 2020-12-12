@@ -28,6 +28,7 @@
 
 <script>
 export default {
+	// name: Delivery,
   props: [ 'linkShops' ],
 }
 </script>
